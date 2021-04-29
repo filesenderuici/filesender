@@ -25,10 +25,9 @@ jobs:
     strategy:
       matrix:
        include:
-         - testsuite: "core"
+         - testsuite: "selenium"
            db: "mysql"
-           travis_sauce_connect: false
-           sauce_username: ""
+           travis_sauce_connect: true
 
 
 
