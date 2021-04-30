@@ -153,7 +153,7 @@ jobs:
       with:
         username: ${{ secrets.SAUCE_USERNAME }}
         accessKey: ${{ secrets.SAUCE_ACCESS_KEY }}
-        tunnelIdentifier: github-action-tunnel
+        tunnelIdentifier: cisel${{ matrix.db }}
         noSSLBumpDomains: file_sender.app
 
 
