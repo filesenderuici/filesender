@@ -102,6 +102,7 @@ class SeleniumTest extends Sauce\Sausage\WebDriverTestCase
         require_once('includes/init.php');
 
 
+/*	
         if(getenv('SAUCE_USERNAME') === false)
         {
 
@@ -120,7 +121,7 @@ class SeleniumTest extends Sauce\Sausage\WebDriverTestCase
         if (!defined('SAUCE_ACCESS_KEY')) {
             define('SAUCE_ACCESS_KEY', getenv('SAUCE_ACCESS_KEY'));
         }
-
+ */
         if (!defined('SAUCE_VERIFY_CERTS')) {
             if(getenv('SAUCE_DONT_VERIFY_CERTS')) {
                 $env_sauce_dont_verify_certify = getenv('SAUCE_DONT_VERIFY_CERTS');
