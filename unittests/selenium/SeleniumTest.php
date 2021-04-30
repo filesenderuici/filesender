@@ -102,6 +102,10 @@ class SeleniumTest extends Sauce\Sausage\WebDriverTestCase
         require_once('includes/init.php');
 
 
+        if (!defined('SAUCE_USERNAME')) {
+            define('SAUCE_USERNAME', getenv('SAUCE_USERNAME'));
+	}
+
 /*	
         if(getenv('SAUCE_USERNAME') === false)
         {
