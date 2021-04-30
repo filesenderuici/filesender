@@ -106,6 +106,7 @@ class SeleniumTest extends Sauce\Sausage\WebDriverTestCase
 	
         if(getenv('SAUCE_USERNAME') === false)
         {
+		echo "sauce username is not in env";
 
             if (Config::get('sauce_username') == null || Config::get('sauce_access_key') == null) {
                 die('Sauce credentials not set!');
