@@ -165,8 +165,6 @@ jobs:
     - name: Run Primary Tests (MAIN JOB)
       env:
         TEST_SECRET: ${{ secrets.TestSecret }}
-        SAUCE_HOST: localhost
-        SAUCE_USERNAME: filesenderuici
       run: |
         if [ "$TESTSUITE" = "cron" ]; then
           echo "testing task/cron job"
@@ -178,6 +176,11 @@ jobs:
         echo "testing $TESTSUITE on database $DB "
         sudo -u www-data id
         sudo -u www-data ./vendor/bin/phpunit --configuration ./unittests/config_tests_filesender.xml --testsuite=$TESTSUITE
+      with:
+        username: ${{ secrets.SAUCE_USERNAME }}
+        accessKey: ${{ secrets.SAUCE_ACCESS_KEY }}
+        tunnelIdentifier: github-action-tunnel
+        noSSLBumpDomains: file_sender.app
 
     - name: Debug Information
       if: ${{ always() }}
