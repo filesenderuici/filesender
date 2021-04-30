@@ -176,6 +176,9 @@ jobs:
         echo "testing $TESTSUITE on database $DB "
         sudo -u www-data id
         sudo -u www-data ./vendor/bin/phpunit --configuration ./unittests/config_tests_filesender.xml --testsuite=$TESTSUITE
+      env:
+        SAUCE_HOST: localhost
+        SAUCE_USERNAME: filesenderuici
 
     - name: Debug Information
       if: ${{ always() }}
