@@ -15,6 +15,8 @@ php -m
 echo "----------------------------------------------------------------"
 
 
+echo "127.0.0.1  file_sender.app" | sudo tee -a /etc/hosts
+
 
 export POSTGRES_DB
 export POSTGRES_HOST

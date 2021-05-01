@@ -176,7 +176,6 @@ jobs:
           sudo -u www-data php scripts/task/cron.php --testing-mode
           echo "cron job complete"
         fi
-        #echo "127.0.0.1  file_sender.app" | sudo tee -a /etc/hosts
         echo "testing $TESTSUITE on database $DB "
         sudo -u www-data id
         sudo -u www-data --preserve-env=SAUCE_USERNAME,SAUCE_ACCESS_KEY,SAUCE_TUNNEL_IDENTIFIER,SAUCE_DONT_VERIFY_CERTS ./vendor/bin/phpunit --configuration ./unittests/config_tests_filesender.xml --testsuite=$TESTSUITE unittests/selenium/tests/ConfigurationOptionsTest.php
