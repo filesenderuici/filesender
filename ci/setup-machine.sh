@@ -71,7 +71,7 @@ sudo cp -f ci/apache2.conf /etc/apache2/sites-enabled/000-default.conf
 sudo sed -e "s?%TRAVIS_BUILD_DIR%?${FILESENDERROOT}?g" --in-place /etc/apache2/sites-enabled/000-default.conf
 
 sudo apt-get install php${php_version}-fpm
-sudo cp /usr/sbin/php-fpm{php_version} ${php_version} /usr/bin/php-fpm # copy to /usr/bin
+sudo cp /usr/sbin/php-fpm${php_version} /usr/bin/php-fpm # copy to /usr/bin
 sudo ls -l /var/lib/apache2/fastcgi
 sudo chown -R runner:docker /var/lib/apache2/fastcgi /usr/sbin/php-fpm${php_version} /usr/bin/php-fpm
 
