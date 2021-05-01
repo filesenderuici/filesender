@@ -107,6 +107,7 @@ grep -l -R SAUCE_HOST ${FILESENDERROOT}/vendor | \
 
 echo "... trying to get index page to verify ..."
 curl -k https://localhost/filesender/
+curl -k https://file_sender.app/filesender/
 
 echo "--------------------"
 echo "Apache logs....     "
