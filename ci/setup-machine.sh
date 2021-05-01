@@ -34,6 +34,13 @@ sed -e "s?%TRAVIS_BUILD_DIR%?${FILESENDERROOT}?g" --in-place ./config/config.php
 chmod -R a+x ./ci/scripts
 
 ####
+echo "looking at permissions on config.php"
+ls -l ./config/config.php
+sudo chown www-data ./config/config.php
+ls -l ./config/config.php
+
+
+####
 #
 # handle the database
 #
