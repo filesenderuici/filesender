@@ -57,7 +57,7 @@ fi
 # Packages
 #
 sudo apt-get update
-sudo apt-get install curl wget apache2 
+sudo apt-get install curl wget apache2  libapache2-mod-fastcgi apache2-mpm-worker 
 
 ####
 # 
