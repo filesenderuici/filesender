@@ -38,6 +38,14 @@ echo "looking at permissions on config.php"
 ls -l ./config/config.php
 sudo chown www-data ./config/config.php
 ls -l ./config/config.php
+echo "looking at www/skin permissions"
+ls -ld www/skin
+ls -ld www
+sudo mkdir www/skin
+sudo chown www-data www/skin
+sudo chmod u+rwx www/skin
+echo "final permissions..."
+ls -ld www/skin
 
 
 ####
