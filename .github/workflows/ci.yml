@@ -3,9 +3,9 @@ name: CI
 
 on:
   push:
-    branches: [ 2021/jan/ghatest2 ]
-  pull_request:
-    branches: [ development ]
+    branches: [ 2021/apr/ghatest2 ]
+#  pull_request:
+#    branches: [ development ]
 
     
 jobs:
@@ -53,8 +53,6 @@ jobs:
 
     strategy:
       matrix: ${{ fromJson(needs.metadata.outputs.matrix) }}      
-
-
 
     services:
       postgres:
