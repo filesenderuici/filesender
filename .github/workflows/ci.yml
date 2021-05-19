@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - '2021/jan/ghatest*'
+      - '2021/may/citest1'
       - 'savage-*'
   pull_request:
     branches: [ development ]
