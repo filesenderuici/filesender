@@ -9,13 +9,6 @@ class UploadAutoResumeTest extends SeleniumTest
 
 
 
-    public function __construct($name = NULL, array $data = array(), $dataName = '')
-    {
-
-        $this->assertEquals( 'abc', getenv('TESTP1'));
-
-
-    }
 
     public static function cb_testGoodFileUpload($data, $file, $id = null, $mode = null, $offset = null) {
         if( $file->name == "file10mb.txt" ) {

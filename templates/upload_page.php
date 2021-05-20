@@ -62,6 +62,8 @@ if( $encryption_mandatory ) {
 ?>
 
 <div class="box">
+<p>TEST123 <?php echo getenv('TESTP1'); ?> </p>
+
     <form id="upload_form" class="<?php echo $formClasses; ?>" enctype="multipart/form-data" accept-charset="utf-8" method="post" autocomplete="off" data-need-recipients="<?php echo $need_recipients ? '1' : '' ?>">
         <div class="box">
             <div class="files" id="fileslist"></div>

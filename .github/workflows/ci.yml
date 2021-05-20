@@ -213,6 +213,7 @@ jobs:
         SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
         SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
         SAUCE_DONT_VERIFY_CERTS: 1
+        TESTP1: 'testp1value'
       run: |
         echo "testing $TESTSUITE on database $DB "
         sudo -u www-data --preserve-env=SAUCE_USERNAME,SAUCE_ACCESS_KEY,SAUCE_TUNNEL_IDENTIFIER,SAUCE_DONT_VERIFY_CERTS ./vendor/bin/phpunit --configuration ./unittests/config_tests_filesender.xml --testsuite=$TESTSUITE unittests/selenium/tests/UploadAutoResumeTest.php
