@@ -120,9 +120,9 @@ class SeleniumTest extends Sauce\Sausage\WebDriverTestCase
         if (!defined('SAUCE_USERNAME')) {
             define('SAUCE_USERNAME', getenv('SAUCE_USERNAME'));
         }
-        if (!defined('SAUCE_ACCESS_KEY')) {
-            define('SAUCE_ACCESS_KEY', getenv('SAUCE_ACCESS_KEY'));
-        }
+        //if (!defined('SAUCE_ACCESS_KEY')) {
+        //    define('SAUCE_ACCESS_KEY', getenv('SAUCE_ACCESS_KEY'));
+        //}
 
         if (!defined('SAUCE_VERIFY_CERTS')) {
             if(getenv('SAUCE_DONT_VERIFY_CERTS')) {
