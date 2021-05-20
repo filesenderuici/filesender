@@ -7,6 +7,16 @@ class UploadAutoResumeTest extends SeleniumTest
 
     protected $start_url_path = '';
 
+
+
+    public function __construct($name = NULL, array $data = array(), $dataName = '')
+    {
+
+        $this->assertEquals( 'abc', getenv('TESTP1'));
+
+
+    }
+
     public static function cb_testGoodFileUpload($data, $file, $id = null, $mode = null, $offset = null) {
         if( $file->name == "file10mb.txt" ) {
             if( TestSuiteSupport::serverside_guard_first_call( "put_perform_testsuite_file10mb.txt" )) {
